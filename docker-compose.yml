@@ -1,0 +1,52 @@
+# Docker Compose Configuration for Plugin Integration Testing
+# Spins up Obsidian + Claude Integration Plugin
+
+version: '3.8'
+
+services:
+  plugin-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: obsidian-claude-plugin-test
+    environment:
+      - NODE_ENV=test
+      - VAULT_PATH=/vault
+      - PLUGIN_PATH=/vault/.obsidian/plugins/obsidian-claude-integration
+    volumes:
+      - ./:/app
+      - vault-data:/vault
+      - node-modules:/app/node_modules
+    ports:
+      - "8080:8080"  # For potential testing server
+    command: |
+      sh -c "
+        echo '=== Building Plugin ===' &&
+        npm run build &&
+        echo '=== Running Unit Tests ===' &&
+        npm run test -- --passWithNoTests &&
+        echo '=== Integration Test Complete ===' &&
+        echo 'Plugin installed at: /vault/.obsidian/plugins/obsidian-claude-integration' &&
+        echo 'Vault location: /vault' &&
+        sleep infinity
+      "
+
+  # Optional: Documentation server
+  docs-server:
+    image: nginx:alpine
+    container_name: obsidian-plugin-docs
+    volumes:
+      - ./docs:/usr/share/nginx/html:ro
+    ports:
+      - "8090:80"
+    command: nginx -g "daemon off;"
+
+volumes:
+  vault-data:
+    driver: local
+  node-modules:
+    driver: local
+
+networks:
+  default:
+    name: obsidian-network

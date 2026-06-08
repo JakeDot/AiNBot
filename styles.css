@@ -1,0 +1,101 @@
+/* Claude Integration Plugin Styles */
+
+.claude-chat-area {
+	font-size: 0.9em;
+	line-height: 1.5;
+	background-color: var(--background-primary);
+	border-radius: 4px;
+}
+
+.claude-input-container {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+.claude-input {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid var(--background-secondary-alt);
+	border-radius: 4px;
+	background-color: var(--background-primary);
+	color: var(--text-normal);
+	font-family: var(--font-monospace);
+	font-size: 0.9em;
+}
+
+.claude-input:focus {
+	outline: none;
+	border-color: var(--interactive-accent);
+	box-shadow: 0 0 0 2px var(--interactive-accent-rgb);
+}
+
+.message {
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.user-message {
+	background-color: var(--background-secondary);
+	border-left: 3px solid var(--interactive-accent);
+}
+
+.assistant-message {
+	background-color: var(--background-secondary-alt);
+	border-left: 3px solid var(--text-accent);
+}
+
+.error-message {
+	background-color: var(--background-secondary);
+	border-left: 3px solid var(--text-error);
+	color: var(--text-error);
+}
+
+.button-container {
+	display: flex;
+	gap: 10px;
+	margin-top: 15px;
+}
+
+.button-container button {
+	flex: 1;
+	padding: 10px 15px;
+	border: 1px solid var(--background-secondary-alt);
+	border-radius: 4px;
+	background-color: var(--background-secondary);
+	color: var(--text-normal);
+	cursor: pointer;
+	font-size: 0.9em;
+	transition: all 0.2s ease;
+}
+
+.button-container button:hover {
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border-color: var(--interactive-accent);
+}
+
+.button-container button:active {
+	opacity: 0.8;
+}
+
+.claude-chat-area::-webkit-scrollbar {
+	width: 8px;
+}
+
+.claude-chat-area::-webkit-scrollbar-track {
+	background: var(--background-secondary);
+	border-radius: 4px;
+}
+
+.claude-chat-area::-webkit-scrollbar-thumb {
+	background: var(--background-secondary-alt);
+	border-radius: 4px;
+}
+
+.claude-chat-area::-webkit-scrollbar-thumb:hover {
+	background: var(--interactive-accent);
+}

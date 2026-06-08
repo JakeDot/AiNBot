@@ -9,3 +9,11 @@ coverage/
 .idea/
 *.swp
 *.swo
+
+# AiNBot specific
+build/
+out/
+.obsidian/
+.npm/
+temp/
+debug.log

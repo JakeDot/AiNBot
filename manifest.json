@@ -1,0 +1,11 @@
+{
+	"id": "obsidian-claude-integration",
+	"name": "Claude Integration",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Integrate Claude AI with Obsidian for enhanced note writing, analysis, and generation",
+	"author": "Admiral General Major Mayer",
+	"authorUrl": "https://github.com/yourusername",
+	"fundingUrl": "https://buymeacoffee.com/yourusername",
+	"isDesktopOnly": false
+}

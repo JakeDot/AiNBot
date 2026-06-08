@@ -1,0 +1,22 @@
+# Docker ignore - reduces build context size
+
+node_modules
+.git
+.gitignore
+README.md
+.env.local
+.vscode
+.idea
+.DS_Store
+*.log
+npm-debug.log*
+.next
+.nuxt
+dist
+build
+.cache
+.parcel-cache
+.eslintcache
+coverage
+.nyc_output
+.jest_cache

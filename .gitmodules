@@ -1,3 +1,6 @@
 [submodule "tools/jd-ai-review-action"]
 	path = tools/jd-ai-review-action
 	url = https://github.com/JakeDot/jd-ai-review-action.git
+[submodule "plan"]
+	path = plan
+	url = https://github.com/JakeDot/plan.git

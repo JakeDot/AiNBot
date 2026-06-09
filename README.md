@@ -22,6 +22,28 @@ A powerful Obsidian plugin that seamlessly integrates Claude AI into your note-t
 - **Response Tuning** - Adjust max tokens and temperature for fine-grained control
 - **Custom System Prompt** - Define Claude's behavior for your specific use cases
 
+
+## 🚀 Development Roadmap
+
+This project follows a structured development roadmap with planned features and releases. See the complete planning documentation:
+
+- **[FEATURE-ROADMAP.md](./FEATURE-ROADMAP.md)** - Strategic roadmap for v1.4.0 → v2.0.0+
+  - 8 parallel feature branches across 4 development phases
+  - Detailed task lists and timeline breakdown
+  - Version milestones and feature specifications
+
+- **[BRANCH-CREATION-PLAN.md](./BRANCH-CREATION-PLAN.md)** - Development strategy and branch structure
+  - Complete PR templates and descriptions for each feature
+  - Dependency graphs and merge order
+  - Status tracking matrix
+
+- **[EXECUTION-CHECKLIST.md](./EXECUTION-CHECKLIST.md)** - Ready-to-execute implementation guide
+  - Copy-paste git commands for each branch
+  - Direct GitHub PR creation URLs
+  - Progress tracking and success criteria
+
+**Current Status**: v1.3.0 (Production) | Next Release: v1.4.0 (Q2 2026)
+
 ## Installation
 
 ### Prerequisites
